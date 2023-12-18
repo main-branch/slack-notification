@@ -30,6 +30,11 @@ jobs:
         id: npm-ci
         run: npm ci
 
+      - name: Install actionlint
+        run: |
+          curl -sLO https://raw.githubusercontent.com/rhysd/actionlint/main/scripts/download-actionlint.bash
+          bash download-actionlint.bash
+
       - name: Check Format
         id: npm-format-check
         run: npm run format:check
