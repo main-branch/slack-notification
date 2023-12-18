@@ -1,21 +1,22 @@
 {
   "name": "javascript-action",
-  "description": "GitHub Actions JavaScript Template",
-  "version": "0.0.0",
-  "author": "",
-  "private": true,
-  "homepage": "https://github.com/actions/javascript-action#readme",
+  "description": "A GitHub Action to send a workflow status message to Slack",
+  "version": "0.1.0",
+  "author": "jcouball@yahoo.com",
+  "private": false,
+  "homepage": "https://github.com/main-branch/slack-notification#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/actions/javascript-action.git"
+    "url": "git+https://github.com/main-branch/slack-notification.git"
   },
   "bugs": {
-    "url": "https://github.com/actions/javascript-action/issues"
+    "url": "https://github.com/main-branch/slack-notification/issues"
   },
   "keywords": [
     "GitHub",
     "Actions",
-    "JavaScript"
+    "JavaScript",
+    "Slack"
   ],
   "exports": {
     ".": "./dist/index.js"
@@ -63,7 +64,10 @@
     ]
   },
   "dependencies": {
-    "@actions/core": "^1.10.1"
+    "@actions/core": "^1.10.1",
+    "@actions/github": "^5.0.0",
+    "@slack/web-api": "^6.10.0",
+    "handlebars": "^4.7.8"
   },
   "devDependencies": {
     "@babel/core": "^7.23.6",
