@@ -5,14 +5,15 @@
 
 Report the results of a CI build workflow to a Slack channel.
 
-Shows the overall SUCCESS/FAIL of the current Workflow run and the status of each job. The
-status for each job in a matrix is reported.
+Shows the overall SUCCESS/FAIL of the current Workflow run and the status of
+each job. The status for each job in a matrix is reported.
 
 ## Usage
 
 See [action.yml](action.yml) for the various `inputs` this action supports.
 
-We recommend this action to be used in a dedicated job at the end of your workflow.
+We recommend this action to be used in a dedicated job at the end of your
+workflow.
 
 ```yaml
 jobs:
@@ -36,19 +37,19 @@ jobs:
 
 ### Inputs 📥
 
-| Input | Required? | Default | Description |
-| ----- | --------- | ------- | ----------- |
-| `github_token` | `true` | `${{ github.token }}` | The GitHub token used to create an authenticated client - Provided for you by default! |
-| `slack_token` | `true` | `undefined` | The token used to send Slack messages. |
+| Input          | Required? | Default               | Description                                                                            |
+| -------------- | --------- | --------------------- | -------------------------------------------------------------------------------------- |
+| `github_token` | `true`    | `${{ github.token }}` | The GitHub token used to create an authenticated client - Provided for you by default! |
+| `slack_token`  | `true`    | `undefined`           | The token used to send Slack messages.                                                 |
 
 ### Outputs 📤
 
-| Output | Description |
-| ------ | ----------- |
+| Output         | Description                                                  |
+| -------------- | ------------------------------------------------------------ |
 | `workflow_run` | Info about the workflow run including the status of all jobs |
 
 ### Environment Variables 🌎
 
 | Variable | Description |
 | -------- | ----------- |
-| None | N/A |
+| None     | N/A         |
