@@ -25,11 +25,12 @@
     "node": ">=20"
   },
   "scripts": {
-    "lint": "npm run lint:actions && npm run lint:markdown && npm run lint:vulnerabilities && npm run lint:secrets",
+    "lint": "npm run lint:actions && npm run lint:markdown && npm run lint:vulnerabilities && npm run lint:secrets && npm run lint:yaml",
     "lint:actions": "actionlint -color",
     "lint:markdown": "markdownlint '**/*.md'",
     "lint:vulnerabilities": "trivy filesystem .",
-    "lint:secrets": "trufflehog filesystem .",
+    "lint:secrets": "trufflehog filesystem . --exclude-paths=.trufflehogignore --fail",
+    "lint:yaml": "yamllint .",
     "ci-test": "jest",
     "format": "trunk fmt --all --print-failures --show-existing",
     "lint:fix": "trunk check --all --fix --print-failures --show-existing",
