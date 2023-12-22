@@ -27,6 +27,7 @@
   "scripts": {
     "lint": "npm run lint:actionlint",
     "lint:actionlint": "actionlint -color",
+    "lint:markdownlint": "markdownlint '**/*.md'",
     "ci-test": "jest",
     "format": "trunk fmt --all --print-failures --show-existing",
     "lint:fix": "trunk check --all --fix --print-failures --show-existing",
