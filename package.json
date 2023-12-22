@@ -25,9 +25,10 @@
     "node": ">=20"
   },
   "scripts": {
-    "lint": "npm run lint:actionlint",
-    "lint:actionlint": "actionlint -color",
-    "lint:markdownlint": "markdownlint '**/*.md'",
+    "lint": "npm run lint:actions && npm run lint:markdown && npm run lint:vulnerabilities",
+    "lint:actions": "actionlint -color",
+    "lint:markdown": "markdownlint '**/*.md'",
+    "lint:vulnerabilities": "trivy filesystem .",
     "ci-test": "jest",
     "format": "trunk fmt --all --print-failures --show-existing",
     "lint:fix": "trunk check --all --fix --print-failures --show-existing",
