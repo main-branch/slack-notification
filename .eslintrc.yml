@@ -3,9 +3,15 @@ env:
   es2021: true
   commonjs: true
   jest: true # Add the 'jest' environment
-extends: eslint:recommended
+extends:
+  - eslint:recommended
+  - prettier
 parserOptions:
   ecmaVersion: latest
   sourceType: module
 rules: {}
-ignorePatterns: [lib/, dist/, node_modules/, coverage/]
+ignorePatterns:
+  - lib/
+  - dist/
+  - node_modules/
+  - coverage/

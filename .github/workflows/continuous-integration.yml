@@ -57,17 +57,20 @@ jobs:
       - name: Lint Javascript files
         run: npm run lint:javascript
 
-      - name: Format, Lint, Test, and Build
-        id: npm-lint
-        run: npm run all
+      - name: Check code formatting
+        run: npm run format:check
 
-      # This will fail the workflow if the PR wasn't created by Dependabot.
-      - name: Compare Directories
-        id: diff
+      - name: Run unit tests
+        run: npm run test
+
+      - name: Verify dist artifacts
         run: |
+          npm run package
           if [ "$(git diff --ignore-space-at-eol --text dist/ | wc -l)" -gt "0" ]; then
-            echo "Detected uncommitted changes after build. See status below:"
+            echo "dist/ artifacts were not built and committed. See status below:"
             git diff --ignore-space-at-eol --text dist/
+            echo
+            echo "Run 'npm run package' and commit the changes."
             exit 1
           fi
 
