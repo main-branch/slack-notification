@@ -40,8 +40,11 @@ jobs:
       - name: Lint Markdown files
         uses: articulate/actions-markdownlint@v1
 
-      - name: Scan for OSV vulnerabilities
-        uses: google/osv-scanner/.github/workflows/osv-scanner-reusable.yml
+      - name: Scan for vulnerabilities
+        uses: aquasecurity/trivy-action@master
+        with:
+          scan-type: 'fs'
+          scan-ref: '.'
 
       - name: Format, Lint, Test, and Build
         id: npm-lint
