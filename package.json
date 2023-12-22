@@ -25,9 +25,10 @@
     "node": ">=20"
   },
   "scripts": {
+    "lint": "npm run lint:actionlint",
+    "lint:actionlint": "actionlint -color",
     "ci-test": "jest",
     "format": "trunk fmt --all --print-failures --show-existing",
-    "lint": "trunk check --all --no-fix --print-failures --show-existing",
     "lint:fix": "trunk check --all --fix --print-failures --show-existing",
     "lint:ci": "trunk check --all --no-fix --ci --show-existing && trunk check list | grep \"✔\\|◯\"",
     "package": "ncc build src/index.js --license licenses.txt",
