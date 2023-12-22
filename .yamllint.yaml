@@ -8,3 +8,5 @@ rules:
   key-duplicates: {}
   octal-values:
     forbid-implicit-octal: true
+ignore: |
+  node_modules

@@ -49,7 +49,10 @@ jobs:
       - name: Scan for secrets
         uses: trufflesecurity/trufflehog@main
         with:
-          extra_args: --only-verified
+          extra_args: --only-verified --exclude-path node_modules
+
+      - name: Lint YAML files
+        uses: ibiqlik/action-yamllint@v3
 
       - name: Format, Lint, Test, and Build
         id: npm-lint
