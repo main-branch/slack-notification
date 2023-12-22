@@ -49,7 +49,7 @@ jobs:
       - name: Scan for secrets
         uses: trufflesecurity/trufflehog@main
         with:
-          extra_args: --only-verified --exclude-path node_modules
+          extra_args: --only-verified --exclude-paths=.trufflehogignore
 
       - name: Lint YAML files
         uses: ibiqlik/action-yamllint@v3
