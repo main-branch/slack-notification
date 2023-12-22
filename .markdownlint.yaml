@@ -10,7 +10,7 @@ MD013: { line_length: 90, tables: false, code_blocks: false }
 MD024: { siblings_only: true }
 
 # Do not allow the specified trailig punctuation in a header
-MD026: { punctuation: '.,;:' }
+MD026: { punctuation: ".,;:" }
 
 # Order list items must have a prefix that increases in numerical order
 MD029: { style: ordered }

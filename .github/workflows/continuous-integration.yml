@@ -43,8 +43,8 @@ jobs:
       - name: Scan for vulnerabilities
         uses: aquasecurity/trivy-action@master
         with:
-          scan-type: 'fs'
-          scan-ref: '.'
+          scan-type: fs
+          scan-ref: .
 
       - name: Format, Lint, Test, and Build
         id: npm-lint
