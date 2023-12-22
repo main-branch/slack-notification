@@ -57,6 +57,9 @@ jobs:
       - name: Lint Javascript files
         run: npm run lint:javascript
 
+      - name: Check code formatting
+        run: npm run format:check
+
       - name: Format, Lint, Test, and Build
         id: npm-lint
         run: npm run all
