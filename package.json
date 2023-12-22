@@ -25,9 +25,10 @@
     "node": ">=20"
   },
   "scripts": {
-    "lint": "npm run lint:actionlint",
+    "lint": "npm run lint:actionlint && npm run lint:markdownlint && npm run lint:osv-scanner",
     "lint:actionlint": "actionlint -color",
     "lint:markdownlint": "markdownlint '**/*.md'",
+    "lint:osv-scanner": "osv-scanner .",
     "ci-test": "jest",
     "format": "trunk fmt --all --print-failures --show-existing",
     "lint:fix": "trunk check --all --fix --print-failures --show-existing",
