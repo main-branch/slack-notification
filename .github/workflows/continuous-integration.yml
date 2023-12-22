@@ -32,6 +32,11 @@ jobs:
         id: npm-ci
         run: npm ci
 
+      - name: Lint Github Action workflow files
+        uses: docker://rhysd/actionlint:latest
+        with:
+          args: -color
+
       - name: Format, Lint, Test, and Build
         id: npm-lint
         run: npm run all
