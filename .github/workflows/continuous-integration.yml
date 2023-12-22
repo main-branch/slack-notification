@@ -46,6 +46,11 @@ jobs:
           scan-type: fs
           scan-ref: .
 
+      - name: Scan for secrets
+        uses: trufflesecurity/trufflehog@main
+        with:
+          extra_args: --only-verified
+
       - name: Format, Lint, Test, and Build
         id: npm-lint
         run: npm run all
