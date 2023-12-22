@@ -1,7 +1,6 @@
 # main-branch/slack-notification
 
-[![GitHub Super-Linter](https://github.com/main-branch/slack-notification/actions/workflows/linter.yml/badge.svg)](https://github.com/super-linter/super-linter)
-![CI](https://github.com/main-branch/slack-notification/actions/workflows/ci.yml/badge.svg)
+[![Continuous Integration](https://github.com/main-branch/slack-notification/actions/workflows/continuous-integration.yml/badge.svg)](https://github.com/main-branch/slack-notification/actions/workflows/continuous-integration.yml)
 
 Report the results of a CI build workflow to a Slack channel.
 
