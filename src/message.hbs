@@ -1,0 +1,40 @@
+{
+	"blocks": [
+		{
+			"type": "rich_text",
+			"elements": [
+				{
+					"type": "rich_text_section",
+					"elements": [
+						{
+							"type": "emoji",
+							"name": "{{ workflowRunStatusEmoji status }}"
+						},
+						{
+							"type": "text",
+							"text": "  {{ workflowRunStatus status }} "
+						},
+						{
+							"type": "link",
+							"url": "{{ htmlUrl }}",
+							"text": "{{ pullRequest.title }}"
+						},
+						{
+							"type": "text",
+							"text": " ("
+						},
+						{
+							"type": "link",
+							"url": "{{ pullRequest.htmlUrl }}",
+							"text": "{{ repository.owner }}/{{ repository.name }}#{{ pullRequest.number	}}"
+						},
+						{
+							"type": "text",
+							"text": ")"
+						}
+					]
+				}
+			]
+		}
+	]
+}
